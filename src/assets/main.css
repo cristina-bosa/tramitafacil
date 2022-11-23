@@ -1,0 +1,18 @@
+@import "./base.css";
+@import "./_buttons.css";
+@import "./_fonts.css";
+@import "./_inputs.css";
+@import "./_margins.css";
+
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 2rem;
+  }
+}

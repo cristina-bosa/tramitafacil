@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap");
+
+:root {
+  --white: hsl(60, 100%, 100%);
+  --white-soft: hsla(60, 100%, 100%, 1);
+  --white-mute: hsla(60, 100%, 100%, 1);
+
+  --primary: hsl(185, 57%, 56%);
+  --primary-soft: hsla(185, 57%, 56%, 0.1);
+  --primary-mute: hsl(185, 57%, 56%);
+
+  --secundary: hsl(267, 87%, 63%);
+  --secundary-soft: hsla(267, 87%, 63%, 0.5);
+  --secundary-mute: hsla(267, 87%, 63%);
+
+  --tertiary: hsl(47, 94%, 72%);
+
+  --dark: hsl(0, 0%, 9%);
+  --dark-soft: hsla(0, 0%, 9%, 0.8);
+  --dark-mute: hsla(234, 10%, 80%, 1);
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--white);
+  --color-background-soft: var(--white-soft);
+  --color-background-mute: var(--white-mute);
+
+  --color-heading: var(--dark);
+  --color-text: var(--dark-soft);
+
+  --section-gap: 0.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--dark-soft);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: Nunito, Ubuntu, Inter, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Cantarell, "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+.content {
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  gap: 2rem;
+  align-items: start;
+  justify-items: start;
+  justify-content: start;
+  height: 100vh;
+}
