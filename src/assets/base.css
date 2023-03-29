@@ -5,19 +5,16 @@
   --white-soft: hsla(60, 100%, 100%, 1);
   --white-mute: hsla(60, 100%, 100%, 1);
 
-  --primary: hsl(185, 57%, 56%);
-  --primary-soft: hsla(185, 57%, 56%, 0.1);
-  --primary-mute: hsl(185, 57%, 56%);
+  --primary: hsl(79, 52%, 58%, 1);
+  --primary-soft: hsla(185, 57%, 56%, 0.2);
 
-  --secundary: hsl(267, 87%, 63%);
-  --secundary-soft: hsla(267, 87%, 63%, 0.5);
-  --secundary-mute: hsla(267, 87%, 63%);
+  --secundary: hsl(338, 91%, 65%, 1);
+  --secundary-soft: hsla(338, 91%, 65%, 0.2);
 
   --tertiary: hsl(47, 94%, 72%);
 
   --dark: hsl(0, 0%, 9%);
   --dark-soft: hsla(0, 0%, 9%, 0.8);
-  --dark-mute: hsla(234, 10%, 80%, 1);
 }
 
 /* semantic color variables for this project */

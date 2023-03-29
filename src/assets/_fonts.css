@@ -4,28 +4,32 @@ h1 {
   line-height: 1.25;
   color: var(--dark);
 }
-h2{
+h2 {
   font-size: 1.5rem;
   line-height: 1.15;
   color: var(--dark);
 }
-h3{
+h3 {
   font-size: 1rem;
   line-height: 1;
   color: var(--dark);
 }
-.text-bold{
+.text-bold {
   font-weight: bold;
 }
 
-.text-italic{
+.text-italic {
   font-style: italic;
 }
 
-.text-primary{
+.text-primary {
   color: var(--primary);
 }
 
-.text-secundary{
+.text-secundary {
   color: var(--secundary);
+}
+
+.text-center {
+  text-align: center;
 }
