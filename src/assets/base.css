@@ -2,9 +2,8 @@
 
 :root {
   --white: hsl(60, 100%, 100%);
-  --white-soft: hsla(60, 100%, 100%, 1);
-  --white-mute: hsla(60, 100%, 100%, 1);
-
+  --white-soft: hsla(180, 6%, 93%, 1);
+  
   --primary: hsl(79, 52%, 58%, 1);
   --primary-soft: hsla(185, 57%, 56%, 0.2);
 
