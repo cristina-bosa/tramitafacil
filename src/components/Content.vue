@@ -13,9 +13,11 @@
     >
       <template #title>{{procedure.title}}</template>
       <template #description>{{procedure.description}}</template>
-      <template v-if="procedure.modeProcedure === 'PT'" #icon><iconUser/></template>
-      <template v-if="procedure.modeProcedure === 'P'" #icon><iconDoc/></template>
-      <template v-if="procedure.modeProcedure === 'T'" #icon><iconDoc/></template>
+      <iconUser v-if="procedure.modeProcedure === 'PT'" />
+      <iconDoc v-if="procedure.modeProcedure === 'PT'" />
+      <iconDoc v-if="procedure.modeProcedure === 'T'" />
+      <iconDoc v-if="procedure.modeProcedure === 'P'" />
+      
       <template #button><button type="button" class="btn-primary">Acceder</button></template>
     </ProcedureItem>
   </section>
