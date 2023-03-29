@@ -20,12 +20,16 @@
       
       <template #button><button type="button" class="btn-primary">Acceder</button></template>
     </ProcedureItem>
+    <div class="text-bold" v-for="user in users" :key="user.id">
+      {{user.name}}
+      </div>
   </section>
 </template>
 <script>
 import ProcedureItem from "../components/ProcedureItem.vue";
 import iconUser from "../components/icons/iconUser.vue";
 import iconDoc from "../components/icons/iconDoc.vue";
+import axios from "axios";
 export default {
   components: {
     ProcedureItem,
@@ -36,6 +40,7 @@ export default {
     textFilter: String
   },
   data() {
+    let users;
     let procedures = [
       {
         id: 1,
@@ -98,10 +103,26 @@ export default {
         presentationDate: "2023/03/20",
       },
     ];
+    
     return {
       procedures,
+      users
     };
   },
+  methods:{
+    getUsers(){
+      axios.get('https://jsonplaceholder.typicode.com/users')
+      .then(response => {
+        this.users = response.data;
+      })
+      .catch(error => {
+        console.log(error);
+      });
+    }
+  },
+  created(){
+    this.getUsers();
+  },  
   computed: {
     filteredProcedures() {
       let temporalProcedures = JSON.parse(JSON.stringify(this.procedures));
@@ -119,6 +140,6 @@ export default {
       }
       return temporalProcedures;
     },
-  },
+  }
 };
 </script>
