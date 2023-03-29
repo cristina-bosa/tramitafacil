@@ -50,30 +50,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.input-container {
-  display: flex;
-  height: 5rem;
-  width: 100%;
-  background-color: var(--primary-soft);
-  border-radius: 1rem;
-  justify-content: space-around;
-  flex-direction: row;
-  align-content: center;
-  align-items: center;
-  padding: 1rem;
-}
-
-.input-container input {
-  height: 100%;
-  width: 100%;
-  border-radius: 1rem;
-  border: 0;
-  background-color: transparent;
-  padding: 1rem;
-  color: var(--dark-soft);
-  outline: none;
-  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-}
-</style>
