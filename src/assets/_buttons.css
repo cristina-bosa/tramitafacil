@@ -6,8 +6,8 @@ button {
 }
 
 .btn-primary {
-  width: 5vw;
-  height: 5vh;
+  width: auto;
+  height: auto;
   background-color: var(--primary);
   color: var(--white);
   padding: 0.5rem 1rem;

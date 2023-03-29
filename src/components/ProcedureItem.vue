@@ -17,12 +17,12 @@
 .procedure-list{
   display: grid;
   grid-template-columns: 1fr 2fr 1fr 1fr;
-  height: 10vh;
-  min-height: 15vh;
+  height: 8vh;
+  min-height: 8vh;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: var(--primary-soft);
+  background-color: var(--white-soft);
   padding-left: 1rem;
   padding-right: 1rem;
   border-radius: 1rem;

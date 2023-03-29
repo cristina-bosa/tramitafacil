@@ -75,6 +75,26 @@ export default {
         tag: "AIEM",
         presentationDate: "2023/03/20",
       },
+      {
+        id: 5,
+        title: "Modelo 666",
+        description: "Declaración de entregas de combustibles exentas",
+        status: "y",
+        modeProcedure: "T",
+        url: "https://www3.gobiernodecanarias.org/tributos/atc/jsf/publico/asistenciaContribuyente/modelos/listado.jsp?tributo=AIEM",
+        tag: "AIEM",
+        presentationDate: "2023/03/20",
+      },
+      {
+        id: 6,
+        title: "Modelo 928",
+        description: "Declaración de entregas de combustibles exentas",
+        status: "y",
+        modeProcedure: "T",
+        url: "https://www3.gobiernodecanarias.org/tributos/atc/jsf/publico/asistenciaContribuyente/modelos/listado.jsp?tributo=AIEM",
+        tag: "AIEM",
+        presentationDate: "2023/03/20",
+      },
     ];
     return {
       procedures,
