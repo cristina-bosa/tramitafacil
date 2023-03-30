@@ -14,6 +14,20 @@
 
   --dark: hsl(0, 0%, 9%);
   --dark-soft: hsla(0, 0%, 9%, 0.8);
+  
+  --info: hsl(221, 100%, 69%, 1);
+  --info-soft: hsl(216, 100%, 87%, 1);
+  --info-dark: hsl(229, 74%, 27%, 1);
+  
+  --danger: hsl(359, 100%, 67%, 1);
+  --danger-soft: hsl(14, 100%, 87%, 1);
+  --danger-dark: hsl(338, 76%, 27%, 1);
+  
+  --warning: hsl(48, 93%, 56%, 1);
+  --waring-soft:hsl(52, 98%, 83%, 1);
+  
+  --success:hsl(94, 62%, 58%, 1);
+  --success-soft:hsl(84, 86%, 86%, 1);
 }
 
 /* semantic color variables for this project */
