@@ -3,8 +3,7 @@
 @import "./_fonts.css";
 @import "./_inputs.css";
 @import "./_margins.css";
-
-
+@import "./_header.css";
 
 @media (min-width: 1024px) {
   body {
@@ -16,4 +15,9 @@
     grid-template-columns: 1fr;
     padding: 0 2rem;
   }
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0 2rem;
 }

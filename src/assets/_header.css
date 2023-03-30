@@ -1,0 +1,15 @@
+header{
+    color: var(--dark);
+    padding: 1rem;
+    font-size: 1.5rem;
+    background: rgba(236, 238, 238, 0.4);
+    backdrop-filter: blur(22.5px);
+    
+}
+header.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}

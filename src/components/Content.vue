@@ -9,27 +9,30 @@
     <h2 v-else class="text-bold text-primary">
       Se han encontrado un total de {{ filteredProcedures.length }} resultados para la búsqueda {{ textFilter }}
     </h2>
-    <ProcedureItem
-      v-for="procedure in filteredProcedures"
-      :key="procedure.id"
-    >
-      <template #title>{{procedure.title}}</template>
-      <template #description>{{procedure.description}}</template>
+    <ProcedureItem v-for="procedure in filteredProcedures" :key="procedure.id">
+      <template #title>{{ procedure.title }}</template>
+      <template #description>{{ procedure.description }}</template>
       <iconUser v-if="procedure.modeProcedure === 'PT'" />
       <iconDoc v-if="procedure.modeProcedure === 'PT'" />
       <iconDoc v-if="procedure.modeProcedure === 'T'" />
       <iconDoc v-if="procedure.modeProcedure === 'P'" />
-      <template #button><button type="button" class="btn-primary">Acceder</button></template>
+      <template #button><button type="button" @click="showDetails(procedure.id)"
+          class="btn-primary">Acceder</button></template>
     </ProcedureItem>
+
+
   </section>
 </template>
+
 <script>
 import ProcedureItem from "../components/ProcedureItem.vue";
+import ProcedureDetails from "../components/ProcedureDetails.vue"
 import iconUser from "../components/icons/iconUser.vue";
 import iconDoc from "../components/icons/iconDoc.vue";
 //import ProcedureServices from "../services/procedure.service.js";
 export default {
   components: {
+    ProcedureDetails,
     ProcedureItem,
     iconUser,
     iconDoc,
@@ -38,6 +41,7 @@ export default {
     textFilter: String
   },
   data() {
+    let isHidden = true;
     let procedures = [
       {
         id: 1,
@@ -48,6 +52,7 @@ export default {
         url: "https://www3.gobiernodecanarias.org/tributos/atc/jsf/publico/asistenciaContribuyente/modelos/listado.jsp?tributo=AIEM",
         tag: "AIEM",
         presentationDate: "2023/03/20",
+        isHidden: true,
       },
       {
         id: 2,
@@ -58,6 +63,7 @@ export default {
         url: "https://www3.gobiernodecanarias.org/tributos/atc/jsf/publico/asistenciaContribuyente/modelos/listado.jsp?tributo=AIEM",
         tag: "AIEM",
         presentationDate: "2023/03/20",
+        isHidden: true,
       },
       {
         id: 3,
@@ -68,6 +74,7 @@ export default {
         url: "https://www3.gobiernodecanarias.org/tributos/atc/jsf/publico/asistenciaContribuyente/modelos/listado.jsp?tributo=AIEM",
         tag: "AIEM",
         presentationDate: "2023/03/20",
+        isHidden: true,
       },
       {
         id: 4,
@@ -78,6 +85,7 @@ export default {
         url: "https://www3.gobiernodecanarias.org/tributos/atc/jsf/publico/asistenciaContribuyente/modelos/listado.jsp?tributo=AIEM",
         tag: "AIEM",
         presentationDate: "2023/03/20",
+        isHidden: true,
       },
       {
         id: 5,
@@ -98,28 +106,40 @@ export default {
         url: "https://www3.gobiernodecanarias.org/tributos/atc/jsf/publico/asistenciaContribuyente/modelos/listado.jsp?tributo=AIEM",
         tag: "AIEM",
         presentationDate: "2023/03/20",
+        isHidden: true,
       },
     ];
-    
+
     return {
       procedures,
+      isHidden,
     };
   },
-  methods:{
-   /* getUsers(){
-      axios.get('https://jsonplaceholder.typicode.com/users')
-      .then(response => {
-        this.users = response.data;
-      })
-      .catch(error => {
-        console.log(error);
+  methods: {
+    /* getUsers(){
+       axios.get('https://jsonplaceholder.typicode.com/users')
+       .then(response => {
+         this.users = response.data;
+       })
+       .catch(error => {
+         console.log(error);
+       });
+     }*/
+
+    showDetails(id) {
+      this.procedures.forEach((procedure) => {
+        procedure.isHidden = true;
       });
-    }*/
+      let idProcedure = id;
+      this.procedures[idProcedure].isHidden = false;
+
+
+    }
   },
-  created(){
+  created() {
     //this.getUsers();
     //ProcedureServices.getUsers().then(data => {this.users = data});
-  },  
+  },
   computed: {
     filteredProcedures() {
       let temporalProcedures = JSON.parse(JSON.stringify(this.procedures));

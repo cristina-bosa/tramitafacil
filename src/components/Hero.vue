@@ -23,6 +23,17 @@
     flex-direction: row;
     height: 100vh;
     gap: 2rem;
+    
   }
+  @media screen and (max-width: 768px) {
+    .hero{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+
 
 </style>

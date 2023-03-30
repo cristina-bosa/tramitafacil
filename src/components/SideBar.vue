@@ -91,7 +91,7 @@ export default {
   list-style: none;
   padding: 0;
   margin: 0;
-  width: 10vw;
+  width: 100%;
 }
 
 .selected {
