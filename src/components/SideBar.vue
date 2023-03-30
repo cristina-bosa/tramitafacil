@@ -19,9 +19,9 @@
     <section class="mt-2">
       <h2 class="text-bold text-primary">Trámites más buscados</h2>
       <ul class="no-dot-list">
-        <li>Compraventa de vehículos</li>
-        <li>Impuesto sucesiones y donaciones</li>
-        <li>Impuesto por IRPF</li>
+        <li class="not-selected">Compraventa de vehículos</li>
+        <li class="not-selected">Impuesto sucesiones y donaciones</li>
+        <li class="not-selected">Impuesto por IRPF</li>
       </ul>
     </section>
   </section>
@@ -92,17 +92,22 @@ export default {
   list-style: none;
   padding: 0;
   margin: 0;
-  width: 10vw;
+  width: 100%;
 }
 
 .selected {
-  background-color: var(--secundary-soft);
-  border: 0.025rem solid var(--secundary);
+  display: flex;
+  justify-content: center;
+  background-color: var(--info-soft);
+  border: 0.025rem solid var(--info);
   margin-top: 2vh;
+  color: var(--info-dark);
   border-radius: 1rem;
   padding: 0.25rem;
 }
 .not-selected {
+  display: flex;
+  justify-content: center;
   background-color: var(--white-soft);
   border: 0.025rem solid var(--white-soft);
   margin-top: 2vh;
