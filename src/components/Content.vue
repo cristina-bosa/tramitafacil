@@ -17,19 +17,15 @@
       <iconDoc v-if="procedure.modeProcedure === 'PT'" />
       <iconDoc v-if="procedure.modeProcedure === 'T'" />
       <iconDoc v-if="procedure.modeProcedure === 'P'" />
-      
       <template #button><button type="button" class="btn-primary">Acceder</button></template>
     </ProcedureItem>
-    <div class="text-bold" v-for="user in users" :key="user.id">
-      {{user.name}}
-      </div>
   </section>
 </template>
 <script>
 import ProcedureItem from "../components/ProcedureItem.vue";
 import iconUser from "../components/icons/iconUser.vue";
 import iconDoc from "../components/icons/iconDoc.vue";
-import axios from "axios";
+//import ProcedureServices from "../services/procedure.service.js";
 export default {
   components: {
     ProcedureItem,
@@ -40,7 +36,6 @@ export default {
     textFilter: String
   },
   data() {
-    let users;
     let procedures = [
       {
         id: 1,
@@ -106,11 +101,10 @@ export default {
     
     return {
       procedures,
-      users
     };
   },
   methods:{
-    getUsers(){
+   /* getUsers(){
       axios.get('https://jsonplaceholder.typicode.com/users')
       .then(response => {
         this.users = response.data;
@@ -118,15 +112,16 @@ export default {
       .catch(error => {
         console.log(error);
       });
-    }
+    }*/
   },
   created(){
-    this.getUsers();
+    //this.getUsers();
+    //ProcedureServices.getUsers().then(data => {this.users = data});
   },  
   computed: {
     filteredProcedures() {
       let temporalProcedures = JSON.parse(JSON.stringify(this.procedures));
-      if (this.textFilter != "") {
+      if (this.$props.textFilter != "") {
         temporalProcedures = temporalProcedures.filter((procedure) => {
           return (
             procedure.title
