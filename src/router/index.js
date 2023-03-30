@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import NotFound from "../views/NotFound.vue";
-import ProcedureItem from "../components/ProcedureItem.vue";
+import ProcedureDetails from "../components/ProcedureDetails.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,7 +14,7 @@ const router = createRouter({
     {
       path: "/procedure/:id",
       name: "procedure",
-      component: ProcedureItem,
+      component: ProcedureDetails,
     },
     {
       path: "/:pathMatch(.*)*",
